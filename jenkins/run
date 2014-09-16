@@ -19,4 +19,4 @@ chown -R jenkins $DATA
 
 exec setuser jenkins java -jar /usr/share/jenkins/jenkins.war >>/var/log/jenkins.log 2>&1
 
-ls /jobs
+# java -jar jenkins-cli.jar -s http://192.241.209.204:8080/ create-job seed-job < jobs/seed-job/config.xml
