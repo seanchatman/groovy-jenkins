@@ -17,6 +17,7 @@ RUN mkdir /etc/service/jenkins
 ADD jenkins/run /etc/service/jenkins/run
 
 # Adding seed job and workspace
+#ADD seed-job /var/lib/jenkins/jobs/seed-job
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /tmp/* /var/tmp/*

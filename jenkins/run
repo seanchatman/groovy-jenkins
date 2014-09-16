@@ -18,3 +18,5 @@ fi
 chown -R jenkins $DATA
 
 exec setuser jenkins java -jar /usr/share/jenkins/jenkins.war >>/var/log/jenkins.log 2>&1
+
+ls /jobs

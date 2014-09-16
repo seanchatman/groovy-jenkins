@@ -2,7 +2,5 @@ app:
   build: .
   volumes:
    - /var/lib/jenkins
-   - workspace:/var/lib/jenkins/workspace
-   - jobs:/var/lib/jenkins/jobs
   ports:
    - "8080:8080"
