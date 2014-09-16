@@ -16,5 +16,7 @@ RUN echo "/var/lib/jenkins" > /etc/container_environment/JENKINS_HOME
 RUN mkdir /etc/service/jenkins
 ADD jenkins/run /etc/service/jenkins/run
 
+# Adding seed job and workspace
+
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /tmp/* /var/tmp/*
