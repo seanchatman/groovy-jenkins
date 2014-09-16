@@ -13,9 +13,6 @@ if find $DATA/plugins -maxdepth 0 -empty | read v; then
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/scm-api.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/postbuild-task.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/job-dsl.hpi)
-    (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/groovy.hpi)
-    (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/gradle.hpi)
-    (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/groovy-postbuild.hpi)
 fi
 
 chown -R jenkins $DATA

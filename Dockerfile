@@ -10,8 +10,6 @@ RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key a
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y jenkins
 
-VOLUME /var/lib/jenkins
-
 RUN echo "/var/lib/jenkins" > /etc/container_environment/JENKINS_HOME
 
 # Start Jenkins
