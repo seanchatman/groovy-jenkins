@@ -1,8 +1,6 @@
-# A Jenkins daemon running in arbiterofcool/jdk8-baseimage-docker:0.1 (phusion/baseimage-docker) 
 
-jenkins-baseimage-docker is a special [Docker](http://www.docker.io) image that follows the best-practices set by [Baseimage-docker](https://github.com/phusion/baseimage-docker).
+# "The favour of the gods has given me a marvelous gift, which has never left me since my childhood. It is a voice which, when it makes itself heard, deters me from what I am about to do and never urges me on."
 
- * Downloads [Jenkins](http://jenkins-ci.org/) within the Dockerfile.
- * Daemon started by [runit](http://smarden.org/runit/).
- * Downloads [Jenkins plugins](http://updates.jenkins-ci.org/download/plugins/) specified in /jenkins/run (Commented out)
- * Uses `setuser` to create jenkins user.
+# — Character of Socrates in "Theages", Plato
+
+Jenkins [Dockerfile](https://github.com/arbiterofcool/jenkins-baseimage-docker) now uses the ONBUILD command.

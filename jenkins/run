@@ -17,6 +17,11 @@ fi
 
 chown -R jenkins $DATA
 
+echo "Starting process."
 exec setuser jenkins java -jar -Dhudson.diyChunking=false /usr/share/jenkins/jenkins.war >>/var/log/jenkins.log 2>&1
+
+echo "Adding seed job."
+java -jar jenkins-cli.jar -s http://107.170.241.4:8080/ create-job seed-job < jobs/seed-job/config.xml
+
 
 # java -jar jenkins-cli.jar -s http://192.241.209.204:8080/ create-job seed-job < jobs/seed-job/config.xml
