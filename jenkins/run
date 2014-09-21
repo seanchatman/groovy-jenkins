@@ -13,6 +13,7 @@ if find $DATA/plugins -maxdepth 0 -empty | read v; then
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/scm-api.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/postbuild-task.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/job-dsl.hpi)
+    (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/startup-trigger-plugin.hpi)
 fi
 
 chown -R jenkins $DATA
