@@ -14,6 +14,8 @@ if find $DATA/plugins -maxdepth 0 -empty | read v; then
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/postbuild-task.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/job-dsl.hpi)
     (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/startup-trigger-plugin.hpi)
+    (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/docker-build-step.hpi)
+    (cd $DATA/plugins && wget --no-check-certificate $PLUGINS_ENDPOINT/docker-plugin.hpi)
 fi
 
 chown -R jenkins $DATA
