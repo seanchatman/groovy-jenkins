@@ -1,8 +1,22 @@
-app:
+jenkins:
   build: .
   volumes:
    - /var/lib/jenkins
    - /var/lib/docker
   ports:
-   - "8080:8080"
+   - "80:80"
   privileged: true
+
+rethinkdb:
+  image: shipyard/rethinkdb
+  ports:
+   - "8080"
+   - "28015"
+   - "29015"
+
+shipyard:
+  build: shipyard/shipyard
+  links:
+    - rethinkdb
+  expose:
+    - "8080:8080"
